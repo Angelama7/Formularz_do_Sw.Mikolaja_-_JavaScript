@@ -26,7 +26,13 @@
 	<legend align="left">Przedstaw się, proszę...</legend>
 	<p>Jak masz na imię?: <input type="text" name="imie" required="required" placeholder="... tu wpisz swoje imię"><br/></p>
 	<p>Jak się nazywasz?: <input type="text" name="nazwisko" required="required" placeholder="... tu wpisz swoje nazwisko"><br/></p>
-	<p>Jaki jest Twój adres e-mail: <input type="email" required="required" name="mail" placeholder="... tu wpisz swój adres e-mail"><br/></p>
+	<p>Jaki jest Twój adres e-mail: <input id="email" type="email" required="required" name="mail" placeholder="... tu wpisz swój adres e-mail"><br/></p>
+
+	<script>
+ 	 const input = document.getElementById("email");
+ 	 input.style.width = input.placeholder.length + "ch";
+	</script>
+		
 	<p>Kiedy się urodziłaś/urodziłeś?: <input type="date" name="data_ur" required="required"></p>
 	</fieldset>
 	<br/>
