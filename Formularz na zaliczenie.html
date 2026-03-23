@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+	<meta charset="utf-8"/>
+	<title>List do Świętego Mikołaja</title>
+	<style>
+	legend {font-family:aptos, sans-serif; color:white; font-weight:bold;}
+	label {font-family:century-gothic, sans-serif; color:pink; font-style:italic; text-shadow: black 0.1em 0.1em 0.2em}
+	p {color:#FFF0F5;}
+	form {margin:0 auto; border:4px solid black;}
+	#main-header {color:white; text-align:center; font-size:3rem; font-style:italic; font-weight:800; text-shadow: gold 0.2em 0.2em 0.4em}
+	#podsumowanie {color:white; margin-left:25px; margin-right:25px; text-align:center; font-size:2rem; font-style:italic;}
+	.dane {border:3px double #003300}
+	.dane2 {border:3px dashed #DAA520}
+	.prez {border:3px solid #8B0000}
+	</style>
+	</head>
+	
+	<body background="tlo.jpg">
+	<!-- <a href="https://pl.freepik.com/darmowe-wektory/swiateczny-sztandar-z-gwiazdami-i-projektami-swiatel-bokeh_20872464.htm#from_view=detail_alsolike">Obraz autorstwa kjpargeter</a> na Freepik -->
+	
+	<form name="form1" action="MAILTO:SwietyMikolaj@wp.pl" method="post" autocomplete="off">
+	<p id="main-header">List do Świętego Mikołaja<p/>
+	
+	<fieldset class="dane">
+	<legend align="left">Przedstaw się, proszę...</legend>
+	<p>Jak masz na imię?: <input type="text" name="imie" required="required" placeholder="... tu wpisz swoje imię"><br/></p>
+	<p>Jak się nazywasz?: <input type="text" name="nazwisko" required="required" placeholder="... tu wpisz swoje nazwisko"><br/></p>
+	<p>Jaki jest Twój adres e-mail: <input type="email" required="required" name="mail" placeholder="... tu wpisz swój adres e-mail"><br/></p>
+	<p>Kiedy się urodziłaś/urodziłeś?: <input type="date" name="data_ur" required="required"></p>
+	</fieldset>
+	<br/>
+	
+	<fieldset class="dane">
+	<legend align="left">Powiedz mi, jesteś dziewczynką, czy chłopcem? ...</legend>
+	<br/>
+	<label><input type="radio" name="plec" value="k" checked="checked">dziewczyna / kobieta<br/></label>
+	<label><input type="radio" name="plec" value="m">chłopak / mężczyzna<br/></label>
+	</fieldset>
+	<br/>
+	
+	<fieldset class="dane2">
+	<legend align="left">Czy byłaś/byłeś grzeczna/grzeczny w tym roku? ...</legend>
+	<br/>
+	<select>
+	<optgroup label="Tak, byłam / byłem grzeczna / grzeczny"></optgroup>
+	<option>Bardzo</option><br/>
+	<option>Zazwyczaj</option><br/>
+	<optgroup label="Trochę tak, trochę nie"></optgroup>
+	<option> Różnie to bywało</option><br/>
+	<optgroup label="Nie, nie byłam / byłem grzeczna / grzeczny"></optgroup>
+	<option>Mam co nieco na sumieniu</option><br/>
+	<option>Zdecydowanie nie</option><br/>
+	</select>
+	</fieldset>
+	<br/>
+	
+	<fieldset class="dane2">
+	<legend align="left">Chciałbym, abyś opowiedziała / opowiedział jeszcze kilka słów o sobie ...</legend>
+	<p>Jaki jest Twój ulubiony kolor?: <input type="color" name="ulubKolor"></p>
+	<p>Jak wysoka / wysoki jesteś?: <input type="number" min="30" max="230"> cm</p>
+	<p>Ile ważysz?: <input type="number" min="2" max="200" step="1"> kg</p>
+	</fieldset>
+	<br/>
+	
+	<fieldset class="prez">
+	<legend align="left">No dobrze, trochę o Tobie już wiem. Teraz wybierz, jaki prezent by Cię ucieszył ...</legend>
+	<br/>
+	<label><input type="checkbox" name="prezenty" value="pr_1"> kosmetyk<br/></label>
+	<label><input type="checkbox" name="prezenty" value="pr_2"> ubranie<br/></label>
+	<label><input type="checkbox" name="prezenty" value="pr_3"> książka<br/></label>
+	<label><input type="checkbox" name="prezenty" value="pr_4"> planszówka<br/></label>
+	<label><input type="checkbox" name="prezenty" value="pr_5"> puzzle<br/></label>
+	<label><input type="checkbox" name="prezenty" value="pr_6"> klocki Lego / Cobi<br/></label>
+	<label><input type="checkbox" name="prezenty" value="pr_7"> biżuteria<br/></label>
+	<label><input type="checkbox" name="prezenty" value="pr_8"> sprzęt elektroniczny<br/></label>
+	<label><input type="checkbox" name="prezenty" value="pr_9"> coś do domu<br/></label>
+	<label><input type="checkbox" name="prezenty" value="pr_10"> coś do kuchni<br/></label>
+	<label><input type="checkbox" name="prezenty" value="pr_11"> coś do samochodu<br/></label>
+	</fieldset>
+	<br/>
+	
+	<fieldset class="prez">
+	<legend align="left">A może jest coś, co chciałabyś / chciałbyś dostać najbardziej? ...</legend>
+	<p>Napisz mi proszę, co dokładnie chciałabyś / chciałbyś dostać, jeśli masz jakiś konkretny wymarzony prezent. Znacznie ułatwi mi to pracę :)
+	</p>
+	<textarea name="pr_ind" cols=70 rows=5>
+	</textarea>
+	<br/>
+	<p>Może znalazłaś / znalazłeś swój wymarzony prezent w internecie i chciałabyś / chciałbyś podać mi do niego link?</p>
+	<input type="url" placeholder="Podaj link do strony www ...">
+	<br/>
+	<p>Czy chciałabyś / chciałbyś przysłać mi jakiś rysunek?</p>
+	<input type="file">
+	</fieldset>
+	<br/>
+	
+	<p id="podsumowanie">Jeśli Twój list jest już kompletny, wciśnij przycisk "Wyślij list do Świętego Mikołaja".<br/>
+	Obiecuję, że dokładnie go przeczytam!<br/>
+	Jeśli jednak chcesz zacząć od początku, wciśnij przycisk "Wyczyść wszystko i zacznij od początku".<br/>
+	Już teraz dziękuję za Twój list i życzę <br/><br/><b>WESOŁYCH ŚWIĄT!!!<b/><p/>
+	<br/>
+	<input type="image" src='Przycisk1.png' alt="Wyślij list do Świętego Mikołaja" width="330" height="80">
+	<br/><br/>
+	<input type="image" src='Przycisk2.png' alt="Wyczyść wszystko i zacznij od początku" width="330" height="80" onclick="form1.reset()">
+	</form>
+	
+	</body>
+</html>
